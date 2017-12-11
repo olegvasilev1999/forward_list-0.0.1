@@ -34,14 +34,15 @@ void addelement(node_t *& list, int & size,int data) {
 		list = first;
 		size++;
 	}
-
 }
 
 void delelement(node_t *& list, int & size) {
-	if (list == nullptr) {
+	if (list == NULL) {
 		return;
 	}
+	node_t * first = list;
 	list = list->next;
+	delete(first);
 	size--;
 }
 
